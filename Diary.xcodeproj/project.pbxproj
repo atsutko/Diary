@@ -7,21 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9BE04EA37EB2CEF4C7801375 /* Pods_Diary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 151B9E471D401F3E19D88516 /* Pods_Diary.framework */; };
+		C1286E95220E41D800E71424 /* SimpleAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1286E94220E41D800E71424 /* SimpleAlert.swift */; };
 		C1D8EFB622053B280026F7F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D8EFB522053B280026F7F8 /* AppDelegate.swift */; };
-		C1D8EFB822053B280026F7F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D8EFB722053B280026F7F8 /* ViewController.swift */; };
 		C1D8EFBB22053B280026F7F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1D8EFB922053B280026F7F8 /* Main.storyboard */; };
 		C1D8EFBD22053B2A0026F7F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1D8EFBC22053B2A0026F7F8 /* Assets.xcassets */; };
 		C1D8EFC022053B2A0026F7F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1D8EFBE22053B2A0026F7F8 /* LaunchScreen.storyboard */; };
+		C1D8EFC822053C460026F7F8 /* Diary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D8EFC722053C460026F7F8 /* Diary.swift */; };
+		C1D8EFD1220540200026F7F8 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D8EFD0220540200026F7F8 /* CalendarViewController.swift */; };
+		C1D8EFD3220540350026F7F8 /* AddDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D8EFD2220540350026F7F8 /* AddDiaryViewController.swift */; };
+		C1D8EFD5220540400026F7F8 /* DetailDairyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D8EFD4220540400026F7F8 /* DetailDairyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		151B9E471D401F3E19D88516 /* Pods_Diary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Diary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		97061FB92250EB3F2369DA56 /* Pods-Diary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Diary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Diary/Pods-Diary.debug.xcconfig"; sourceTree = "<group>"; };
+		C1286E94220E41D800E71424 /* SimpleAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAlert.swift; sourceTree = "<group>"; };
 		C1D8EFB222053B280026F7F8 /* Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1D8EFB522053B280026F7F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C1D8EFB722053B280026F7F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C1D8EFBA22053B280026F7F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C1D8EFBC22053B2A0026F7F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C1D8EFBF22053B2A0026F7F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C1D8EFC122053B2A0026F7F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1D8EFC722053C460026F7F8 /* Diary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diary.swift; sourceTree = "<group>"; };
+		C1D8EFD0220540200026F7F8 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		C1D8EFD2220540350026F7F8 /* AddDiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDiaryViewController.swift; sourceTree = "<group>"; };
+		C1D8EFD4220540400026F7F8 /* DetailDairyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDairyViewController.swift; sourceTree = "<group>"; };
+		F51EE0775F654D1B620DA89D /* Pods-Diary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Diary.release.xcconfig"; path = "Pods/Target Support Files/Pods-Diary/Pods-Diary.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +41,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BE04EA37EB2CEF4C7801375 /* Pods_Diary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		90181655F82E753E8BB92140 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				97061FB92250EB3F2369DA56 /* Pods-Diary.debug.xcconfig */,
+				F51EE0775F654D1B620DA89D /* Pods-Diary.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BCACF4DF7D9E32FB55F105F6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				151B9E471D401F3E19D88516 /* Pods_Diary.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C1D8EFA922053B280026F7F8 = {
 			isa = PBXGroup;
 			children = (
 				C1D8EFB422053B280026F7F8 /* Diary */,
 				C1D8EFB322053B280026F7F8 /* Products */,
+				90181655F82E753E8BB92140 /* Pods */,
+				BCACF4DF7D9E32FB55F105F6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +87,49 @@
 			isa = PBXGroup;
 			children = (
 				C1D8EFB522053B280026F7F8 /* AppDelegate.swift */,
-				C1D8EFB722053B280026F7F8 /* ViewController.swift */,
-				C1D8EFB922053B280026F7F8 /* Main.storyboard */,
+				C1D8EFC922053C4C0026F7F8 /* Model */,
+				C1D8EFCA22053F300026F7F8 /* View */,
+				C1D8EFCF220540010026F7F8 /* Controller */,
 				C1D8EFBC22053B2A0026F7F8 /* Assets.xcassets */,
-				C1D8EFBE22053B2A0026F7F8 /* LaunchScreen.storyboard */,
 				C1D8EFC122053B2A0026F7F8 /* Info.plist */,
+				C1286E94220E41D800E71424 /* SimpleAlert.swift */,
 			);
 			path = Diary;
+			sourceTree = "<group>";
+		};
+		C1D8EFC922053C4C0026F7F8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C1D8EFC722053C460026F7F8 /* Diary.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C1D8EFCA22053F300026F7F8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C1D8EFCB22053F3D0026F7F8 /* Storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C1D8EFCB22053F3D0026F7F8 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				C1D8EFB922053B280026F7F8 /* Main.storyboard */,
+				C1D8EFBE22053B2A0026F7F8 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		C1D8EFCF220540010026F7F8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C1D8EFD0220540200026F7F8 /* CalendarViewController.swift */,
+				C1D8EFD2220540350026F7F8 /* AddDiaryViewController.swift */,
+				C1D8EFD4220540400026F7F8 /* DetailDairyViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +139,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C1D8EFC422053B2A0026F7F8 /* Build configuration list for PBXNativeTarget "Diary" */;
 			buildPhases = (
+				4C17BA9761388BEEC54D108D /* [CP] Check Pods Manifest.lock */,
 				C1D8EFAE22053B280026F7F8 /* Sources */,
 				C1D8EFAF22053B280026F7F8 /* Frameworks */,
 				C1D8EFB022053B280026F7F8 /* Resources */,
+				D1A509FE16EA2D56F0EB1079 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,13 +200,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4C17BA9761388BEEC54D108D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Diary-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1A509FE16EA2D56F0EB1079 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Diary/Pods-Diary-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSCalendar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Diary/Pods-Diary-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C1D8EFAE22053B280026F7F8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1D8EFB822053B280026F7F8 /* ViewController.swift in Sources */,
+				C1D8EFD3220540350026F7F8 /* AddDiaryViewController.swift in Sources */,
+				C1D8EFD1220540200026F7F8 /* CalendarViewController.swift in Sources */,
+				C1D8EFD5220540400026F7F8 /* DetailDairyViewController.swift in Sources */,
+				C1286E95220E41D800E71424 /* SimpleAlert.swift in Sources */,
 				C1D8EFB622053B280026F7F8 /* AppDelegate.swift in Sources */,
+				C1D8EFC822053C460026F7F8 /* Diary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +397,7 @@
 		};
 		C1D8EFC522053B2A0026F7F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97061FB92250EB3F2369DA56 /* Pods-Diary.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +416,7 @@
 		};
 		C1D8EFC622053B2A0026F7F8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F51EE0775F654D1B620DA89D /* Pods-Diary.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

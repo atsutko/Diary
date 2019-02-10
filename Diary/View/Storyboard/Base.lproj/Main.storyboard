@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Rvi-N9-2tX">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Calendar View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CalendarViewController" customModule="Diary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aRc-1K-NBC" customClass="FSCalendar">
+                                <rect key="frame" x="0.0" y="64" width="375" height="280"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="280" id="HHJ-SU-9zV"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PvB-XH-cNE">
+                                <rect key="frame" x="0.0" y="344" width="375" height="323"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="diaryCell" rowHeight="60" id="ykR-xT-2Yk">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ykR-xT-2Yk" id="0sL-HA-l8n">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="pFV-nG-yxB" kind="show" identifier="toDetail" id="qoc-Fj-nkJ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="PvB-XH-cNE" firstAttribute="top" secondItem="aRc-1K-NBC" secondAttribute="bottom" id="0MH-B1-VMB"/>
+                            <constraint firstItem="PvB-XH-cNE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="AK3-q0-P7o"/>
+                            <constraint firstItem="PvB-XH-cNE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Gkc-qP-1ed"/>
+                            <constraint firstItem="aRc-1K-NBC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Vf0-xr-tdC"/>
+                            <constraint firstItem="aRc-1K-NBC" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="b3f-Ze-p0O"/>
+                            <constraint firstItem="PvB-XH-cNE" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="qMY-oL-ybI"/>
+                            <constraint firstItem="aRc-1K-NBC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xQz-So-dRf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5Hf-77-Zaj">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="2Ti-Jv-GA2">
+                            <connections>
+                                <segue destination="YmS-Sa-b9Q" kind="show" id="8gv-Ed-N3B"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="calendar" destination="aRc-1K-NBC" id="eqT-VI-WYe"/>
+                        <outlet property="diaryTitleTableView" destination="PvB-XH-cNE" id="5JL-ax-w7O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="132.68365817091455"/>
+        </scene>
+        <!--日記タイトル-->
+        <scene sceneID="48u-Ef-1RP">
+            <objects>
+                <viewController id="pFV-nG-yxB" customClass="DetailDairyViewController" customModule="Diary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CRj-L1-3Vr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1sF-JD-SRO">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1sF-JD-SRO" firstAttribute="leading" secondItem="SpL-TK-Cwp" secondAttribute="leading" id="7lc-qC-nT5"/>
+                            <constraint firstItem="1sF-JD-SRO" firstAttribute="trailing" secondItem="SpL-TK-Cwp" secondAttribute="trailing" id="84s-Bc-6rb"/>
+                            <constraint firstItem="1sF-JD-SRO" firstAttribute="bottom" secondItem="SpL-TK-Cwp" secondAttribute="bottom" id="CXJ-RX-qO7"/>
+                            <constraint firstItem="1sF-JD-SRO" firstAttribute="top" secondItem="SpL-TK-Cwp" secondAttribute="top" id="ZBg-KU-4Z6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SpL-TK-Cwp"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="日記タイトル" id="jVZ-y6-MRb"/>
+                    <connections>
+                        <outlet property="detailTextView" destination="1sF-JD-SRO" id="E1m-Aq-LNd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NU6-8r-RXk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1840.8" y="421.43928035982015"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="obh-lD-INc">
+            <objects>
+                <viewController id="YmS-Sa-b9Q" customClass="AddDiaryViewController" customModule="Diary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hOL-2S-ilp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6yL-ar-9Bw">
+                                <rect key="frame" x="16" y="130" width="343" height="517"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="日記タイトル" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6hf-ZO-KWv">
+                                <rect key="frame" x="16" y="80" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="5Xc-Ji-X6A"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Z4w-dK-3ca" firstAttribute="trailing" secondItem="6hf-ZO-KWv" secondAttribute="trailing" constant="16" id="1d6-aY-Lgw"/>
+                            <constraint firstItem="Z4w-dK-3ca" firstAttribute="trailing" secondItem="6yL-ar-9Bw" secondAttribute="trailing" constant="16" id="2QJ-cR-LN1"/>
+                            <constraint firstItem="6yL-ar-9Bw" firstAttribute="top" secondItem="6hf-ZO-KWv" secondAttribute="bottom" constant="20" id="6H8-ls-bp4"/>
+                            <constraint firstItem="6yL-ar-9Bw" firstAttribute="leading" secondItem="Z4w-dK-3ca" secondAttribute="leading" constant="16" id="e07-8D-zHH"/>
+                            <constraint firstItem="6hf-ZO-KWv" firstAttribute="leading" secondItem="Z4w-dK-3ca" secondAttribute="leading" constant="16" id="mHq-7E-QrY"/>
+                            <constraint firstItem="Z4w-dK-3ca" firstAttribute="bottom" secondItem="6yL-ar-9Bw" secondAttribute="bottom" constant="20" id="nXE-cO-IbW"/>
+                            <constraint firstItem="6hf-ZO-KWv" firstAttribute="top" secondItem="Z4w-dK-3ca" secondAttribute="top" constant="16" id="yOY-cc-6Zf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Z4w-dK-3ca"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="3YS-Ra-0cU">
+                        <barButtonItem key="rightBarButtonItem" title="保存" id="Oq0-T0-jQ2">
+                            <connections>
+                                <action selector="save" destination="YmS-Sa-b9Q" id="73I-uG-oTW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="detailTextView" destination="6yL-ar-9Bw" id="lFH-KA-naU"/>
+                        <outlet property="titleTexitField" destination="6hf-ZO-KWv" id="vzN-pC-tjT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zwY-kM-bKg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1840.8" y="-275.71214392803603"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Qf3-Si-2oW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Rvi-N9-2tX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Q1d-Ni-xz8">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="zBw-kC-swQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z5s-xc-LXh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>
