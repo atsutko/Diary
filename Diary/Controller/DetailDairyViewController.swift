@@ -17,7 +17,7 @@ class DetailDairyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.title = "\(selectedDiary)の日記"
+        self.navigationController?.title = "\(selectedDiary.title)"
         detailTextView.text = selectedDiary.note
     }
     
